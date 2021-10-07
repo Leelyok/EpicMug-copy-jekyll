@@ -1,0 +1,585 @@
+/*  NOTES
+- fonts:
+    - Didot - Regular (headings)
+    - Baskerville - Regular (small body text)
+    - Proxima Nova - Medium
+    - Lato - links and specific elements
+- Colors:
+    - beige - F8F6F4
+    - pink - FFA995
+- Map: [https://snazzymaps.com/style/115413/light-and-beige](https://snazzymaps.com/style/115413/light-and-beige)
+
+- changing the fonts
+- changing the background images
+- typography styles:
+     - general styles
+     - features text (changing the color of the text)
+     - font-size
+- button styles
+- image styles (rounded edges)
+
+
+
+*/
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img { max-width: 100%;}
+
+/*  Temporary Styles */
+
+ /** {
+    padding: 0.5rem;
+    border: 2px solid rgb(200,200,200);
+} 
+
+ html, 
+body {
+    border: none;
+} 
+
+ h1,h2,h3,h4,h5,h6,p, a {
+    border: 2px solid rgb(179, 84, 84);
+}
+*/
+
+/* Re-usable Utiity Classes  */
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.tall-50 { min-height: 50vh; }
+.tall-60 { min-height: 60vh; }
+.tall-70 { min-height: 70vh; }
+.tall-80 { min-height: 80vh; }
+.tall-90 { min-height: 90vh; }
+.tall-100 { min-height: 100vh; }
+
+
+.padded    { padding: 5%;    }
+.padded-10    { padding: 10%;    }
+.padded-0 { padding: 0; }
+
+.padded-l-r  {
+padding-bottom: 0;
+padding-top: 0;
+padding-left: 2rem;
+padding-right: 2rem;
+}
+
+.padded-t {
+    padding-top: 1rem;
+}
+
+.padded-1,
+.grid.padded-1  { padding: 1rem;  }
+
+.padded-2,
+.grid.padded-2  { padding: 2rem;  }
+
+.margin-b-0 { margin-bottom: 0; }
+.margin-t-1 { margin-top: 1rem;}
+
+
+
+.bg-light    { background-color: #F8F6F4;}
+.bg-featured { background-color: #e1d9d0;  }
+.bg-dark     { background-color: #24282B;  }
+.bg-ceramic  { 
+    background-image: url('/images/ceramics-faded-3.png');
+    background-size: cover;
+    background-position: 50% 27%;
+}
+
+
+.text-light { color: white; } 
+.text-featured { color: #f59186;}
+.text-epic { color: #d57c73;}
+
+
+.left   { text-align: left; }
+.center { text-align: center; }
+.right  { text-align: right; }
+
+
+/* General typography & universal styles  */
+
+body {
+    font-family: 'Merriweather', serif;
+    color: rgb(90,90,90);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+h1 {font-size: 6.5rem;}
+
+h1 span {
+    display: block;
+    font-size: 2.5rem;
+    line-height: 0.9;
+}
+
+h2 {font-size: 2.5rem;}
+h3 {font-size: 2rem;}
+
+h3 span {
+    display: block; 
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+p {
+    font-family: Helvetica;
+    line-height: 1.4;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.02rem;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+
+.text-tiny {
+    font-size: 0.9rem;
+}
+
+ul {margin-left: 1rem;}
+li {padding-left: 0.5rem;
+line-height: 2rem;}
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child {
+    margin-bottom: 0;
+}
+
+
+.text-sm { font-size: 1rem;}
+.text-lg { font-size: 3.5rem;}
+.text-xl { font-size: 4.5rem;}
+.text-xxl { font-size: 8rem;}
+.text-bold { font-weight: bold;}
+
+.text-lato {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #e37165;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.button:hover {
+background-color: #e1a39c;
+color: #9f806e; 
+}
+
+nav a:hover {
+    color:rgb(145, 140, 140)
+}
+
+
+.button {
+    color: rgb(90,90,90);
+    border: 1px solid #f59186;
+    border-radius: 2rem;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+}
+
+.back-to-top {
+    margin: 5%;
+  }
+
+/* Header & Footer */
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header {
+    color: #cf6a5f;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #DFDAD7;
+}
+
+header .logo {
+    width: 180px;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+}
+
+nav {
+    letter-spacing: 0.05rem;
+    font-size: 1.1rem;
+}
+
+footer {
+    padding-bottom: 0.5rem;
+    color: rgb(145, 140, 140);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+footer a:hover { 
+    color: #d3b4a2; 
+}
+
+/*  Header & Humburger Menu    */
+
+.hamburger-button {
+    cursor: pointer;
+    padding: 0.5rem;
+    display: inline-block;
+    font-weight: 200;
+    font-size: 2.5rem;
+    line-height: 0.8;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    z-index: 2;
+  }
+
+/* Default Responsive Styles (Dekstop and below) */
+.mob-show {
+    display: none; 
+  }
+
+/* Styles when the hamburger button is active  */
+.hamburger-button.active {
+    color: white;
+  }
+  
+  
+  .mobile-menu {
+    display: none; 
+    background-color: rgb(72, 75, 76); 
+    color: white;
+    padding: 5%;
+    position: fixed; 
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    text-align: center;
+  }
+  
+  
+  .mobile-menu a {
+    text-decoration: none; 
+    color: inherit; 
+    padding: 5vh 5%;
+    display: block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+
+/* Images & Background Images */
+
+/* Aspect Ratio  */
+.portrait-tall { padding-bottom: 175%; }
+.portrait { padding-bottom: 125%; }
+.square { padding-bottom: 100%; }
+.landscape { padding-bottom: 66%; }
+.landscape-wide { padding-bottom: 56%; }
+
+/* Background Position */
+.bg-pos-t { background-position: top; }
+.bg-pos-b { background-position: bottom; }
+.bg-pos-l { background-position: left; }
+.bg-pos-r { background-position: right; }
+
+.gallery [class*="col-"] {
+  padding: 0.5%;
+}
+
+/* Images & Background Images */
+
+.bg-image {
+    background-color: rgb(240,240,240);
+    background-image: url('/images/leaves-light-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-img-1 { background-image: url('/images/ceramics-1.JPG'); 
+ 
+}
+.bg-img-2 { background-image: url('/images/ceramics-2.JPG'); 
+  
+}
+
+.bg-img-3 { background-image: url('/images/ceramics-3.JPG'); 
+    background-position: 50% 25%;
+}
+
+.bg-img-4 { background-image: url('/images/stakan-keramika.JPG'); 
+    background-position: bottom;
+}
+
+.bg-img-5 { background-image: url('/images/set-ceramics-mug.JPG'); 
+  
+}
+
+
+
+.bg-stone { background-image: url('/images/stone.png'); }
+
+.bg-mug   { background-image: url('/images/posuda-iz-keramiki.JPG');}
+
+.bg-mug-exp   { 
+    background-image: url('/images/posuda-iz-keramiki-1.png');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bg-set  { background-image: url('/images/stilnaya-keramika.JPG'); }
+
+.bg-leaves { 
+    background-image: url('/images/zen-studio-1.jpg');
+    background-position: 50% 31%;
+}
+
+.bg-venue { background-image: url('/images/zen-studio-3.jpg'); }
+.bg-map { background-image: url('/images/map-light-beige.png'); } 
+
+.shape-teardrop {
+    border-radius: 20rem;
+    border-bottom-right-radius: 0;
+}
+
+.shape-window {
+    border-top-left-radius: 20rem;
+    border-top-right-radius: 20rem;
+    opacity: 0.8;
+}
+
+/* Explore page */
+
+.explore-page a {
+    display: block;
+    padding: 0.5rem 0;
+    border: 1px solid;
+    margin: 0.5rem;
+}
+
+
+/* Icon Grid Section  */
+.icon-section img {
+    max-width: 3rem;
+    opacity: 0.8;
+    margin: 1rem 0;
+}
+
+/* Contact form styles  */
+
+form input, 
+form textarea {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 2px solid rgb(220,220,220);
+  outline: none;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+
+textarea {
+  min-height: 4rem;
+}
+
+form label {
+  margin-top: 1rem;
+  display: inline-block;
+  color: #6C7A89;
+  font-weight: bold;
+}
+
+form button {
+  background-color:#6C7A89;
+  color: white;
+  border: none;
+  padding: 0.5rem 2rem;
+  letter-spacing: 0.1em;
+  margin: 0.5rem 0;
+}
+
+
+.form-styled input,
+.form-styled texarea {
+  border: 2px solid #F8edeb;
+  background-color: #F8edeb;
+}
+
+.form-styled label {
+  color: #FFA995;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.form-styled button {
+  border: 2px solid #fd7970;
+  background-color: white;
+  color: #fd7970;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  border-radius: 7px;
+}
+
+.form-styled input:focus,
+.form-styled textarea:focus {
+  border-color: #fd7970;
+}
+
+.width-100 {  width: 100%; }
+
+.big-text-form {  
+  font-size: 1.2rem;
+}
+
+
+
+section {
+    background-color: #FFF4EB;
+    color: #555555;
+    padding: 5%;
+    min-height: 65vh;
+  }
+  
+  .review {
+    padding: 2%;
+    border: 6px solid #FFF4EB;
+  }
+  
+  
+  .box-1 {
+    background-color: #f6d7c6;
+    border-radius: 5rem;
+  }
+  
+  .box-2 {
+    background-color: #f9e6dc;
+    border-radius: 5rem;
+  }
+  
+  .box-3 {
+    background-color: #f9dfdc;
+    border-radius: 5rem;
+  }
+  
+  .padded-05 {
+      padding: 0.5%;
+  }
+  
+  .padded-1 {
+      padding: 1%;
+  }
+  
+  .padded-3 {
+    padding: 3%;
+  }
+  
+  .big-text {
+    font-size: 3rem;
+  }
+  
+  .centered {
+    text-align: center;
+  }
+
+
+
+/*@media (max-width: 36em)	Max 576px	_xs-*
+@media (max-width: 48em)	Max 768px	_sm-*
+@media (max-width: 64em)	Max 1024px	_md-*
+@media (max-width: 80em)	Max 1280px	_lg-*  */
+
+
+/*  Gridlex small media query - Max 768 px _sm*/
+@media(max-width: 942px /*48em*/)	{
+    .text-xxl { font-size: 6rem;}
+    .text-xl { font-size: 3.5rem;}
+    .text-lg { font-size: 2.5rem;}
+    .sm-block { display: block;}
+    .bg-leaves { background-image: url('/images/leaves-light-1.png');}
+    .img-sm { max-height: 80vh;}
+    .text-center-sm { text-align: center;}
+    .mob-hide { display: none; }
+    .mob-show { display: block; }     
+    .explore-page a {
+        display: block;
+        padding: 0.5rem 0;
+    border: 1px solid;
+    margin: 0.5rem;
+    }
+    .mob-horisont-scroll {
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .mob-horisont-scroll img { 
+      max-width: 20rem;
+      vertical-align: middle;
+      display: inline-block;
+      max-height: 400px;
+      border: 8px solid #FFF4EB;
+      border-radius: 1rem;
+    } 
+}
+
+/*  Gridlex extra small media query - Max 576 px _xs*/
+@media(max-width: 36em)	{
+    .text-xxl { font-size: 4rem;}
+    .text-xl { font-size: 2.5rem;}
+    .text-lg { font-size: 2.5rem;}
+    .explore-page a {
+           display: block;
+        padding: 0.5rem 0;
+    border: 1px solid;
+    margin: 0.5rem;
+    }
+}
+
+/*  Gridlex XXS media query - Max 400 px _xxs*/
+@media(max-width: 25em)	{
+    .text-xxl { font-size: 2.5rem;}
+    .explore-page a {
+           display: block;
+        padding: 0.5rem 0;
+    border: 1px solid;
+    margin: 0.5rem;
+    }
+}
